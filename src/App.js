@@ -6,6 +6,13 @@ import { Dientich_hcn_function } from './Dientich_hcn_function';
 import { Dientich_hcn_class } from './Dientich_hcn_class';
 import { Counter_function } from './Counter_function';
 import{Counter_class} from './Counter_class';
+
+import AppContent from './Content/AppContent';
+import MyForm from './MyForm';
+import MarkForm from './MarkForm';
+
+import ShowProduct from './FormContent/ShowProduct';
+import Add from './Form/Add';
 function App(){
   // return <Greeting name="Duyên Hà"/>;
   return (
@@ -20,10 +27,20 @@ function App(){
           </div>
         </div> */}
         {/* <Shape dai="200px" rong="200px" bgr="Pink"></Shape> */}
-        <Dientich_hcn_function></Dientich_hcn_function>
+        {/* <Dientich_hcn_function></Dientich_hcn_function>
         <Dientich_hcn_class></Dientich_hcn_class>
         <Counter_function></Counter_function>
-        <Counter_class></Counter_class>
+        <Counter_class></Counter_class> */}
+
+
+        {/* <AppContent></AppContent>
+        <MyForm></MyForm>
+        <MarkForm></MarkForm> */}
+
+        <ShowProduct></ShowProduct>
+{/* 
+        <Add></Add> */}
+
     </div>
   
   );
