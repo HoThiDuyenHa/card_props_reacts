@@ -1,0 +1,38 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "efa6",
+      "name": "Nguyen Van A",
+      "email_address": "nguyenvanb@gmail.com",
+      "phone_number": "012345678",
+      "password": "123456",
+      "password_confirmation": "456",
+      "role": "user"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

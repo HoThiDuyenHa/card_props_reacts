@@ -13,6 +13,11 @@ import MarkForm from './MarkForm';
 
 import ShowProduct from './FormContent/ShowProduct';
 import Add from './Form/Add';
+
+import React,{Component} from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import routes from './routes';
+
 function App(){
   // return <Greeting name="Duyên Hà"/>;
   return (
@@ -37,15 +42,34 @@ function App(){
         <MyForm></MyForm>
         <MarkForm></MarkForm> */}
 
-        <ShowProduct></ShowProduct>
+        {/* <ShowProduct></ShowProduct> */}
 {/* 
         <Add></Add> */}
 
+
+<Router>
+      <div>
+        <h2>Welcome to React Router Tutorial</h2>
+        <hr />
+
+        <Routes>
+           {showRoutes(routes)}
+          </Routes>
+      </div>
+    </Router>
     </div>
-  
   );
+
 }
-// function Greeting(props){
-//   return <h1>Hello,{props.name}!</h1>
-// }
+ // Hàm render routes
+ const showRoutes = (routes) => {
+  return routes.map((route, index) => (
+    <Route
+      key={index}
+      path={route.path}
+      element={<route.main />}
+    />
+  ));
+    }
+  
 export default App;

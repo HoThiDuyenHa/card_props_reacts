@@ -7,13 +7,11 @@ const ShowProduct = () => {
   const [showForm, setShowForm] = useState(false);
   const [products, setProducts] = useState([]);
 
-  // Lấy dữ liệu từ localStorage khi component được render lần đầu
   useEffect(() => {
     const savedProducts = localStorage.getItem('products');
     if (savedProducts) {
       setProducts(JSON.parse(savedProducts)); 
     } else {
-      // Nếu chưa có dữ liệu trong localStorage, dùng Dataform để lấy dữ liệu ban đầu
       const data = Dataform(); 
       setProducts(data);
     }
@@ -36,18 +34,18 @@ const ShowProduct = () => {
 
   return (
     <div>
-      <button onClick={handleShowForm} className="btn btn-primary">
+      <button onClick={handleShowForm} className="btn btn-danger">
         {showForm ? 'Ẩn Form' : 'Hiển Thị Form'}
       </button>
 
       {showForm && <AddProduct addProduct={addProduct} />}
 
-      <div className="product-list">
+      <div className="row">
         {products.map((product) => (
           <Item product={product} />
         ))}
       </div>
-      
+
     </div>
   );
 };
